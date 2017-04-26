@@ -14,12 +14,8 @@ cred = YAML.load_file('aws_creds.yaml')
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure("2") do |config|
-  # The most common configuration options are documented and commented below.
-  # For a complete reference, please see the online documentation at
-  # https://docs.vagrantup.com.
 
-  # Every Vagrant development environment requires a box. You can search for
-  # boxes at https://atlas.hashicorp.com/search.
+  # Vagrant development environment box
   config.vm.box = "dummy"
   config.vm.provision :shell, path: "bootstrap.sh"
 
@@ -35,7 +31,7 @@ Vagrant.configure("2") do |config|
     aws.secret_access_key = cred['aws']['secret_access_key']
     aws.region = "us-east-1"
     aws.security_groups = ['launch-wizard-1']
-    aws.keypair_name = "data_eng_ec2"
+    aws.keypair_name = "aws"
 
     aws.ami = "ami-f4cc1de2"
     aws.instance_type = "t2.micro"
