@@ -2,8 +2,10 @@
 
 import json
 import requests
+from requests.exceptions import ChunkedEncodingError
 import boto3
 import datetime
+
 
 def initialize():
     kinesis = boto3.client('firehose', region_name='us-east-1')
@@ -14,13 +16,17 @@ def stream_events(stream_request, client, stream_name):
     # get streaming event data from meetup.com
     print(stream_request.status_code)
     data = stream_request.iter_lines()
-    for event in data:
-        try:
+    # event = None
+    try:
+        for event in data:
             client.put_record(
                 DeliveryStreamName=stream_name,
-                Record={'Data': json.dumps(event.decode('utf-8')) + '\n'})
-        except ValueError:
-            print('triggered value error exception:{} at {}'.format(event, datetime.datetime.now()))
+                Record={'Data': event.decode('utf-8') + '\n'})
+
+    except Exception as e:
+        if not event:
+            event = 'Not defined'
+        print('triggered {} exception (event, time): {}, {}'.format(type(e).__name__, event, datetime.datetime.now())
 
 
 if __name__ == '__main__':
