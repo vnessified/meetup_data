@@ -41,10 +41,10 @@ Overview of the data system and tools used.
 ### Show
 - Spark dataframes are plotted by way of Pandas and Seaborn
 
-- Boto interfaces with AWS and connects the HTML and plots generated to a S3 bucket that will host the static page to serve as a dashboard (see below screenshot)
+- Boto interfaces with AWS and connects the HTML and plots generated to a S3 bucket that will host the static page to serve as a dashboard ([View Dashboard](https://s3.amazonaws.com/meetupevents-dashboard/meetupevents-report.html) or see below screenshot)
 
 ![dashboard](images/dashboard.png)
-[View Dashboard](https://s3.amazonaws.com/meetupevents-dashboard/meetupevents-report.html)
+
 
 ## Principles of Big Data Systems
 ### Robustness and fault tolerance
@@ -79,4 +79,4 @@ Overview of the data system and tools used.
 
 ### Debuggability
 - This is an area for big improvement, while there are some error messages built into the scripts here it's quite minimal
-- Along the same lines, but not necessarily for pure debugging, more monitoring/logging functionality could be added to alert when processes fail or scripts error out 
+- Along the same lines, but not necessarily for pure debugging, more monitoring/logging functionality could be added to alert when processes fail or scripts error out
