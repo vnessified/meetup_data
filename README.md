@@ -43,5 +43,5 @@ Overview of the data system and tools used.
 
 - Boto interfaces with AWS and connects the HTML and plots generated to a S3 bucket that will host the static page to serve as a dashboard (see below screenshot)
 
-![dashboard](images/dashboard.png.png)
+![dashboard](images/dashboard.png)
 [View Dashboard](https://s3.amazonaws.com/meetupevents-dashboard/meetupevents-report.html)
