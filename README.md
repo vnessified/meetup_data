@@ -1,2 +1,2 @@
 # meetup_data
-stream and analyze data from meetup.com
+Stream and analyze data from meetup.com.
