@@ -46,7 +46,7 @@ Overview of the data system and tools used.
 ![dashboard](images/dashboard.png)
 
 
-## Principles of Big Data Systems
+## Adherence to Principles of Big Data Systems
 ### Robustness and fault tolerance
 
 - AWS is a fairly robust platform however it's possible for their products and services to malfunction or go down
