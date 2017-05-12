@@ -41,11 +41,11 @@ Overview of the data system and tools used.
 ### Show
 - Spark dataframes are plotted by way of Pandas and Seaborn
 
-- Boto interfaces with AWS and connects the HTML and plots generated to a S3 bucket that will host the static page to serve as a dashboard ([View Dashboard](https://s3.amazonaws.com/meetupevents-dashboard/meetupevents-report.html) or see below screenshot)  
+- Boto interfaces with AWS and connects the HTML and plots generated to a S3 bucket that will host the static page to serve as a dashboard ([View Dashboard](https://s3.amazonaws.com/meetupevents-dashboard/meetupevents-report.html) or see below screenshot)
 
-</br>
-![dashboard](images/dashboard.png)  
-</br>
+
+![dashboard](images/dashboard.png)
+
 
 
 ## Adherence to Principles of Big Data Systems
